@@ -7,8 +7,7 @@
 # Fixed Point Unit Verilog Code Report
 
 ## Introduction
-The provided Verilog code defines a Fixed Point Unit (FPU) designed to perform basic arithmetic operations, including addition, subtraction, multiplication, and square root calculations, on fixed-point numbers. This report provides an in-depth explanation of the module's functionality, parameters, input/output ports, and the internal workings of the square root and multiplication calculation circuits.
-
+The Verilog code presented delineates a Fixed Point Unit (FPU) engineered to execute fundamental arithmetic operations, such as addition, subtraction, multiplication, and square root calculations on fixed-point numbers. This report furnishes a comprehensive exposition of the module's functionality, parameters, input/output ports, as well as the internal mechanisms of the square root and multiplication calculation circuits.
 ## Module Declaration and Parameters
 ### Module Declaration
 ```verilog
@@ -175,7 +174,7 @@ The square root algorithm implemented here is an iterative method based on the d
 ## Multiplier Circuit
 
 ### Overview
-The multiplier circuit in this Verilog code is designed to perform 32-bit fixed-point multiplication by breaking the operands into 16-bit segments and using a series of partial products to achieve the final result. This approach is efficient for hardware implementation and allows for the use of smaller, simpler multiplier circuits.
+The multiplier circuit in the provided Verilog code is designed to execute 32-bit fixed-point multiplication by decomposing the operands into 16-bit segments and employing a series of partial products to obtain the final result. This method enhances efficiency for hardware implementation and facilitates the use of smaller, simpler multiplier circuits.
 
 ### Internal Signals and Registers
 The following internal signals and registers are used in the multiplier circuit:
@@ -323,9 +322,9 @@ The multiplication algorithm breaks down the 32-bit multiplication into four 16-
    - Sets `product_ready` to 1 to indicate the multiplication is complete.
 
 ### Advantages of the Approach
-- **Efficiency**: By breaking down the multiplication into smaller segments, the circuit can use simpler, faster 16-bit multipliers.
-- **Modularity**: The use of a separate `Multiplier` module allows for easy modification or replacement if a different multiplication algorithm is desired.
-- **Scalability**: The approach can be extended to larger bit-widths by further breaking down the operands and increasing the number of partial products.
+- **Efficiency**: By segmenting the multiplication process into smaller parts, the circuit can utilize simpler and faster 16-bit multipliers.
+- **Modularity**: The implementation of a distinct `Multiplier` module permits easy modification or replacement should an alternative multiplication algorithm be required.
+- **Scalability**: This method can be expanded to accommodate larger bit-widths by further subdividing the operands and increasing the number of partial products.
 
 
 
@@ -421,7 +420,7 @@ The loop begins at the label loop and includes several floating-point operations
 
 ## Summary
 
-This Verilog assembly code initializes the stack pointer and global pointer, then enters a loop where it processes pairs of floating-point values by calculating the Euclidean distance for each pair and accumulating the results. The loop iterates through a block of memory, updating the stack pointer each time, and halts execution when the stack pointer reaches the global pointer.
+This Verilog assembly code initializes the stack pointer and global pointer before entering a loop to process pairs of floating-point values. It calculates the Euclidean distance for each pair and accumulates the results. The loop iterates through a memory block, updating the stack pointer with each iteration, and halts execution when the stack pointer reaches the global pointer.
 
 ### pictures
 ![plot](/Signal%20Images/first.png)
